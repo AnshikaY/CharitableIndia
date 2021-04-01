@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en"> <!--dir="ltr"-->
+  <head>
+    <meta charset="utf-8">
+    <title> Contact Us </title>
+    <link rel="stylesheet" type="text/css" href="{%  static  'css/style.css'  %}">
+  </head>
+  <body>
+
+    <div class="top_navbar">
+      <a href="{% url 'home' %}">Home</a>
+      <a href="{% url 'about' %}">About</a>
+      <a href="{% url 'donate' %}">Donate</a>
+      <a href="join.html">Join Us</a>
+      <a href="{% url 'faq' %}">FAQs</a>
+      <a href="feedback.html">Feedback</a>
+      <a class="active" href="{% url 'contact' %}">Contact Us</a>
+    </div>
+
+    <div class="watermarked">
+      <img src="https://images.unsplash.com/uploads/1413222992504f1b734a6/1928e537?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="Photo">
+    </div> <br><br>
+
+    <h1 align="center"> Contact us </h1> <br>
+
+    <div class="intro">
+      <div class="ques"> <p> Thank you for your interest in CharitAble India. </p></div>
+
+    <p> For any queries relating to donation, invitation, press/media request, partnerships or other general inquiry, you can get in touch through any of them:</p>
+
+    <ul>
+      <li> <p><b>Email:</b> charitable_india@children.org </p></li>
+      <li> <p><b>Facebook:</b> <a href="https://www.facebook.com/">facebook.com/charitable_india</a></p></li>
+      <li> <p><b>Twitter:</b> <a href="https://twitter.com/login">twitter.com/charitable_india</a></p></li>
+      <li> <p><b>Write:</b> CharitAble India, PO Box 226021, Hazratganj, Lucknow, Uttar Pradesh, India </p></li>
+      <li> <p><b>Fax:</b> 123-456-7891 </p></li> </ul>
+  </div> <br><br>
+
+    <hr>
+    <h4 align="center"> CharitAble India | PO Box 226021 | Hazratganj, Lucknow | Uttar Pradesh | India </h4>
+    <br>
+
+  </body>
+</html>

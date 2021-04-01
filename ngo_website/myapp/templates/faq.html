@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en"><!--dir="ltr"-->
+  <head>
+    <meta charset="utf-8">
+    <title> FAQs </title>
+    <link rel="stylesheet" type="text/css" href="{%  static  'css/style.css'  %}">
+  </head>
+  <body>
+
+    <div class="top_navbar">
+      <a href="{% url 'home' %}">Home</a>
+      <a href="{% url 'about' %}">About</a>
+      <a href="{% url 'donate' %}">Donate</a>
+      <a href="join.html">Join Us</a>
+      <a class="active" href="{% url 'faq' %}">FAQs</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="{% url 'contact' %}">Contact Us</a>
+    </div>
+
+    <div class="watermarked">
+      <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="Photo">
+    </div> <br><br>
+
+    <h1 align="center"> Frequently Asked Questions </h1> <br><br>
+
+    <div class="intro">
+      <p><b> Looking for answers? </b></p>
+
+    <p> Someone once said, “He who has all the answers isn’t asking the right questions.”
+      We like to think we have both! <br><br>
+        Here are some helpful answers to questions we get all the time. Want to talk in person?
+        <a href="{% url 'contact' %}">Contact Us</a>.
+   </p> <br><br>
+
+     <h2> <u>About us (in general)</u> </h2> <br>
+
+     <div class="ques"><p> What is CharitAble India? </p></div>
+     <p> We are a global non-profit organisation for the betterment of children which was founded in January,
+       2020 in India. Today, it is working alongside India's leading independent child rights NGOs. As of now,
+       we plan to cover all 29 states of India. For further details, visit <a href="{% url 'about' %}">About</a>.</p>
+
+     <div class="ques"><p> What do you work for? </p></div>
+     <p>Our kids. Half the kids in the world (about a billion) are growing up in poverty. And while global
+       poverty is a huge and complex problem, it's also solvable. In fact, we've got a bold plan to help.
+       For more details, visit our <a href="{% url 'home' %}">home page</a>.</p>
+
+     <div class="ques"><p> How did you get started? </p></div>
+     <p> A group of like minded people originally working for betterment of children at their own levels came
+       together to broaden the field of work with the belief of <em> together we can.</em></p>
+
+     <div class="ques"><p> How can I work at your organisation? </p></div>
+     <p> We’re looking for the best, brightest and most passionate people on the planet. <a href="join.html">Join Us</a>.</p>
+     <br><br>
+
+     <h2> <u>About giving (including where your money goes)</u> </h2> <br>
+
+     <div class="ques"><p> Where does my money actually go? Do you give it directly to the kids in your program? </p></div>
+     <p> No, we don’t give funds directly to the kids, but your support is invested directly into programs
+       for their health, education, empowerment and employment. </p>
+
+     <div class="ques"><p> In what different ways can I contribute? </p></div>
+     <p> You can either <a href="{% url 'donate' %}">donate</a> or <a href="join.html">join us</a>.
+       If you want to contribute in any way other than financial, <a href="{% url 'contact' %}">contact us</a>.</p>
+
+     <div class="ques"><p> How do you choose locations to build a community center? </p></div>
+     <p> We look at areas with the highest concentration of poverty, usually urban slum communities. Using government data
+       and statistics, we identify major cities and then seek to understand what the need is and what other services are
+       offered in those communities. </p>
+
+     <div class="ques"><p> What is your refund/cancellation policy? </p></div>
+     <p> If for any reason you would like a refund for your donation, we will process the refund, using the original
+       method of payment. It may take up to 10 business days (depending on your bank) for a refund to appear on your account.
+        You can cancel your monthly subscription anytime by <a href="{% url 'contact' %}">contacting us</a>.</p><br>
+
+     <p><b> For more queries feel free to <a href="{% url 'contact' %}">contact us</a> and in case of suggestions,
+       visit <a href="feedback.html">Feedback</a>.</b></p>
+    </div> <br><br>
+
+    <hr>
+    <h4 align="center"> CharitAble India | PO Box 226021 | Hazratganj, Lucknow | Uttar Pradesh | India </h4>
+    <br>
+
+  </body>
+</html>

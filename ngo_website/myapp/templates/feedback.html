@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" <!--dir="ltr"-->>
+  <head>
+    <meta charset="utf-8">
+    <title> Feedback </title>
+    <link rel="stylesheet" type="text/css" href="{%  static  'css/style.css'  %}">
+    <script src="{% static '/js/feedback.js' %}"></script>
+  </head>
+  <body>
+
+    <div class="top_navbar">
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="donate.html">Donate</a>
+      <a href="join.html">Join Us</a>
+      <a href="faq.html">FAQs</a>
+      <a class="active" href="feedback.html">Feedback</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+
+    <div class="watermarked">
+      <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="Photo">
+    </div> <br><br>
+
+    <h1 align="center"> Feedback </h1> <br><br>
+
+    <div class="intro">
+      <p align="center"> If you have any suggestions or feedback about us and our working, please tell us through the form given below:</p>
+    </div>
+
+    <div class="form">
+      <form align="center" onsubmit=feed_info()>
+
+        <br><br>
+        <b>Full Name:</b></label> <input type="text" name="fname" placeholder="First Name" required> &nbsp; <input type="text" name="lname" placeholder="Last Name" required>
+          <br><br>
+          <b>Email:</b><input type="email" name="mail" placeholder="@xyz.com" required>
+          <br><br>
+          <b>Suggestions/Feedback:</b> <br><br> <textarea rows="8" cols="55" required></textarea> <br><br>
+          <input class="button" type="submit" name="submit" value="SUBMIT">
+
+      </form>
+    </div> <br><br>
+
+    <hr>
+    <h4 align="center"> CharitAble India | PO Box 226021 | Hazratganj, Lucknow | Uttar Pradesh | India </h4>
+    <br>
+
+  </body>
+</html>
