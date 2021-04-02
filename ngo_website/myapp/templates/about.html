@@ -12,9 +12,9 @@
       <a href="{% url 'home' %}">Home</a>
       <a class="active" href="{% url 'about' %}">About</a>
       <a href="{% url 'donate' %}">Donate</a>
-      <a href="join.html">Join Us</a>
+      <a href="{% url 'join' %}">Join Us</a>
       <a href="{% url 'faq' %}">FAQs</a>
-      <a href="feedback.html">Feedback</a>
+      <a href="{% url 'feedback' %}">Feedback</a>
       <a href="{% url 'contact' %}">Contact Us</a>
     </div>
 
@@ -51,7 +51,7 @@
     Child Labour, Child Refugee Crisis, Child Trafficking, Improper Healthcare and Lack of Education are our prime enemies,
     all of which stem from Poverty. </p>
 
-    <p> We firmly believe that <em>'together we can'</em>. So come <a href="join.html">join us</a>! </p>
+    <p> We firmly believe that <em>'together we can'</em>. So come <a href="{% url 'join' %}">join us</a>! </p>
 
     <p align="right"> <b> - Founder, CharitAble India </b> </p>
    </div> <br><br>

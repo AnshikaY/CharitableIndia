@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en" <!--dir="ltr"-->>
+<html lang="en"> <!--dir="ltr"-->
   <head>
     <meta charset="utf-8">
     <title> Membership Form </title>
@@ -10,13 +10,13 @@
   <body>
 
     <div class="top_navbar">
-      <a href="home.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="donate.html">Donate</a>
-      <a class="active" href="join.html">Join Us</a>
-      <a href="faq.html">FAQs</a>
-      <a href="feedback.html">Feedback</a>
-      <a href="contact.html">Contact Us</a>
+      <a href="{% url 'home' %}">Home</a>
+      <a href="{% url 'about' %}">About</a>
+      <a href="{% url 'donate' %}">Donate</a>
+      <a class="active" href="{% url 'join' %}">Join Us</a>
+      <a href="{% url 'faq' %}">FAQs</a>
+      <a href="{% url 'feedback' %}">Feedback</a>
+      <a href="{% url 'contact' %}">Contact Us</a>
     </div>
 
     <div class="watermarked">
@@ -26,36 +26,36 @@
     <h1 align="center"> Membership Form </h1> <br>
 
     <div class="form">
-      <form align="center" onsubmit=join_info()>
-
+      <form action="{% url 'join' %}" method="POST" align="center" onsubmit=join_info()>
+        {% csrf_token %}
         <br><br>
         <b>Full Name:</b> <input type="text" name="fname" placeholder="First Name" required> &nbsp; <input type="text" name="lname" placeholder="Last Name" required>
-          <br><br>
-          <b> Gender: </b> Male<input type="radio" name="same" value="m" required> &nbsp; Female<input type="radio" name="same" value="f"> &nbsp; Other<input type="radio" name="same" value="o"> <br><br>
-          <b> Date Of Birth: </b> <input type="text" name="dob" placeholder="DD/MM/YYYY" required> <br><br>
-          <b>Email:</b> <input type="email" name="mail" placeholder="@xyz.com" required>
-          <br><br>
-          <b>Telephone Number:</b> <input type="number" name="code" placeholder="Area Code" required> - <input type="number" name="number" placeholder="Phone Number" required>
-          <br><br>
-          <b> Permanent Address: </b> <input type="text" name="address" placeholder="Street Address" required> <br><br>
-          <input type="text" name="address" placeholder="Street Address Line 2"> <br><br>
-          <input type="text" name="address" placeholder="City/Town" required> &nbsp; <input type="text" name="address" placeholder="State" required> <br><br>
-          <input type="number" name="address" placeholder="Postal/Zip Code">
-          <br><br>
-          <label for="mp"><b>Membership Period: </b></label>
-          <select id="mp" name="mp" required>
-            <option value=""> </option>
-            <option value="Six Months"> Six Months </option>
-            <option value="One Year"> One Year </option>
-            <option value="Two Years"> Two Years </option>
-          </select> <br><br>
-          <b>Why do you want to be a part of CharitAble India? </b> <br><br> <textarea rows="8" cols="55" required></textarea> <br><br>
-          <b> I confirm that the above information provided is correct and true to my knowledge </b> <input type="checkbox" required> <br><br>
-          <input class="button" type="submit" name="register" value="APPLY">
-
-        </form>
-        </div>
         <br><br>
+        <b> Gender: </b> Male<input type="radio" name="same" value="m" required> &nbsp; Female<input type="radio" name="same" value="f"> &nbsp; Other<input type="radio" name="same" value="o"> <br><br>
+        <b> Date Of Birth: </b> <input type="text" name="dob" placeholder="DD/MM/YYYY" required> <br><br>
+        <b>Email:</b> <input type="email" name="mail" placeholder="@xyz.com" required>
+        <br><br>
+        <b>Telephone Number:</b> <input type="number" name="code" placeholder="Area Code" required> - <input type="number" name="number" placeholder="Phone Number" required>
+        <br><br>
+        <b> Permanent Address: </b> <input type="text" name="street_address" placeholder="Street Address" required> <br><br>
+        <input type="text" name="street_address_2" placeholder="Street Address Line 2"> <br><br>
+        <input type="text" name="city" placeholder="City/Town" required> &nbsp; <input type="text" name="state" placeholder="State" required> <br><br>
+        <input type="number" name="pincode" placeholder="Postal/Zip Code">
+        <br><br>
+        <label for="mp"><b>Membership Period: </b></label>
+        <select id="mp" name="mp" required>
+          <option value=""> </option>
+          <option value="Six Months"> Six Months </option>
+          <option value="One Year"> One Year </option>
+          <option value="Two Years"> Two Years </option>
+        </select> <br><br>
+        <b>Why do you want to be a part of CharitAble India? </b> <br><br> <textarea name="text" rows="8" cols="55" required></textarea> <br><br>
+        <b> I confirm that the above information provided is correct and true to my knowledge </b> <input type="checkbox" name="confirm" required> <br><br>
+        <input class="button" type="submit" name="register" value="APPLY">
+
+      </form>
+    </div>
+    <br><br>
 
     <hr>
     <h4 align="center"> CharitAble India | PO Box 226021 | Hazratganj, Lucknow | Uttar Pradesh | India </h4>
