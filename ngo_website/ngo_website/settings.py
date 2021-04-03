@@ -25,7 +25,7 @@ SECRET_KEY = '+jy07y$ox*9m7tek4y)%sac26exg=qbz5cu42g6f_d&4o=y2u-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["charitable-india-website.herokuapp.com",]
 
 
 # Application definition
