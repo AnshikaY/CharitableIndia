@@ -126,7 +126,7 @@ p {
 .watermarked {
   position: relative;
   height: 50%;
-  background-image: url("http://placehold.it/100x100/09f/fff.png");
+  background-image: url("https://dummyimage.com/100x100/0099ff/0099ff.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
