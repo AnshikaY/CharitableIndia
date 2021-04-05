@@ -27,7 +27,7 @@
     </div> <br><br>
 
     <h1 align="center"> Membership Form </h1> <br>
-    {% message %}
+    <!--{% message %}-->
     <div class="form">
       <form action="{% url 'join' %}" method="POST" align="center" onsubmit=join_info()>
         {% csrf_token %}
