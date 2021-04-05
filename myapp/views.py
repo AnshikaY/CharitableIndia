@@ -37,7 +37,10 @@ def donate(request):
             pre.save()
             # print(request.POST)
         except Exception as e:
-            print(e)
+            message = e
+            return render(request, "donate.html", {'message': message})
+            # print(e)
+
     return render(request, "donate.html", {})
     # return redirect('donation')
 
@@ -69,7 +72,9 @@ def join(request):
                               city=str(city),state=str(state),pincode=str(pincode),mp=str(mp),text=str(text),confirm=str(confirm))  # ORM
             pre1.save()
         except Exception as e:
-            print(e)
+            message = e
+            return render(request, "join.html", {'message': message})
+            # print(e)
     return render(request, "join.html", {})
 
 def faq(request):
@@ -85,7 +90,9 @@ def feedback(request):
             pre2 = Feedback(fname=str(fname),lname=str(lname),mail=str(mail),text=str(text))
             pre2.save()
         except Exception as e:
-            print(e)
+            message = e
+            return render(request, "feedback.html", {'message': message})
+            # print(e)
     return render(request, "feedback.html", {})
 
 def contact(request):
