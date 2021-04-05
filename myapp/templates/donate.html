@@ -27,7 +27,7 @@
     </div> <br><br>
 
     <h1 align="center"> Donation Form </h1> <br>
-    {% message %}
+    <!--{% message %}-->
     <div class="form">
       <form action="{% url 'donate' %}" method="POST" align="center" onsubmit=don_info()>
         {% csrf_token %}
