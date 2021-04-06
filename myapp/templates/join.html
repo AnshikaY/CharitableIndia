@@ -27,23 +27,23 @@
     </div> <br><br>
 
     <h1 align="center"> Membership Form </h1> <br>
-    {{ message }}
+    {{ message }} 
     <div class="form">
       <form action="{% url 'join' %}" method="POST" align="center" onsubmit=join_info()>
         {% csrf_token %}
         <br><br>
-        <b>Full Name:</b> <input type="text" name="fname" placeholder="First Name" required> &nbsp; <input type="text" name="lname" placeholder="Last Name" required>
+        <b>Full Name:</b> <input type="text" name="fname" placeholder="First Name" maxlength="20" required> &nbsp; <input type="text" name="lname" placeholder="Last Name" maxlength="20" required>
         <br><br>
         <b> Gender: </b> Male<input type="radio" name="same" value="m" required> &nbsp; Female<input type="radio" name="same" value="f"> &nbsp; Other<input type="radio" name="same" value="o"> <br><br>
-        <b> Date Of Birth: </b> <input type="text" name="dob" placeholder="DD/MM/YYYY" required> <br><br>
-        <b>Email:</b> <input type="email" name="mail" placeholder="@xyz.com" required>
+        <b> Date Of Birth: </b> <input type="text" name="dob" placeholder="DD/MM/YYYY" maxlength="10" required> <br><br>
+        <b>Email:</b> <input type="email" name="mail" placeholder="@xyz.com" maxlength="50" required>
         <br><br>
-        <b>Telephone Number:</b> <input type="number" name="code" placeholder="Area Code" required> - <input type="number" name="number" placeholder="Phone Number" required>
+        <b>Telephone Number:</b> <input type="number" name="code" placeholder="Area Code" maxlength="3" required> - <input type="number" name="number" placeholder="Phone Number" maxlength="11" required>
         <br><br>
-        <b> Permanent Address: </b> <input type="text" name="street_address" placeholder="Street Address" required> <br><br>
-        <input type="text" name="street_address_2" placeholder="Street Address Line 2"> <br><br>
-        <input type="text" name="city" placeholder="City/Town" required> &nbsp; <input type="text" name="state" placeholder="State" required> <br><br>
-        <input type="number" name="pincode" placeholder="Postal/Zip Code">
+        <b> Permanent Address: </b> <input type="text" name="street_address" placeholder="Street Address" maxlength="100" required> <br><br>
+        <input type="text" name="street_address_2" placeholder="Street Address Line 2" maxlength="100"> <br><br>
+        <input type="text" name="city" placeholder="City/Town" maxlength="50" required> &nbsp; <input type="text" name="state" placeholder="State" maxlength="50" required> <br><br>
+        <input type="number" name="pincode" placeholder="Postal/Zip Code" maxlength="6">
         <br><br>
         <label for="mp"><b>Membership Period: </b></label>
         <select id="mp" name="mp" required>
