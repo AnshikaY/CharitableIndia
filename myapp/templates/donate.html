@@ -27,7 +27,7 @@
     </div> <br><br>
 
     <h1 align="center"> Donation Form </h1> <br>
-    {{ message }}
+<!--{{ message }}-->
     <div class="form">
       <form action="{% url 'donate' %}" method="POST" align="center" onsubmit=don_info()>
         {% csrf_token %}
@@ -36,16 +36,16 @@
         <br><br>
         <label for="m"><b>Email:</b></label> <input type="email" id="m" name="mail" placeholder="@xyz.com" maxlength="50" required>
         <br><br>
-        <label for="cn"><b>Contact Number:</b></label> <input type="number" id="cn" name="code" placeholder="Area Code" maxlength="3" pattern="^[0-9]{3}$" required> - <input type="number" name="number" placeholder="Phone Number" maxlength="11" pattern = "^[0-9]{11}$" required>
+        <label for="cn"><b>Contact Number:</b></label> <input type="text" id="cn" name="code" placeholder="Area Code" maxlength="3" pattern="\d*" required> - <input type="number" name="text" placeholder="Phone Number" maxlength="11" pattern="\d*" required>
         <br><br>
         <label for="pa"><b> Permanent Address: </b></label>
         <input type="text" id="pa" name="street_address" placeholder="Street Address" maxlength="100" required> <br><br>
         <input type="text" id="pa" name="street_address_2" placeholder="Street Address Line 2" maxlength="100"> <br><br>
         <input type="text" id="pa" name="city" placeholder="City/Town" maxlength="50" required> &nbsp;
         <input type="text" id="pa" name="state" placeholder="State" maxlength="50" required> <br><br>
-        <input type="number" id="pa" name="pincode" placeholder="Postal/Zip Code" maxlength="6" pattern = "^[0-9]{6}$">
+        <input type="text" id="pa" name="pincode" placeholder="Postal/Zip Code" maxlength="6" pattern="\d*">
         <br><br>
-        <label for="da"><b> Donation Amount: </b></label> <input type="number" id="da" name="amount" placeholder="in INR" maxlength="10" pattern = "^[0-9]{10}$" required>
+        <label for="da"><b> Donation Amount: </b></label> <input type="text" id="da" name="amount" placeholder="in INR" maxlength="10" pattern="\d*" required>
         <br><br>
         <label for="mop"><b>Mode of Payment: </b></label>
         <select id="mop" name="mop" required>
