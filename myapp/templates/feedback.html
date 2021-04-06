@@ -36,9 +36,9 @@
       <form action="{% url 'feedback' %}" method="POST" align="center" onsubmit=feed_info()>
         {% csrf_token %}
         <br><br>
-        <b>Full Name:</b></label> <input type="text" name="fname" placeholder="First Name" required> &nbsp; <input type="text" name="lname" placeholder="Last Name" required>
+        <b>Full Name:</b></label> <input type="text" name="fname" placeholder="First Name" maxlength="20" required> &nbsp; <input type="text" name="lname" placeholder="Last Name" maxlength="20" required>
         <br><br>
-        <b>Email:</b><input type="email" name="mail" placeholder="@xyz.com" required>
+        <b>Email:</b><input type="email" name="mail" placeholder="@xyz.com" maxlength="50" required>
         <br><br>
         <b>Suggestions/Feedback:</b> <br><br> <textarea name ="text" rows="8" cols="55" required></textarea> <br><br>
         <input class="button" type="submit" name="submit" value="SUBMIT">
@@ -49,7 +49,7 @@
 
     <hr>
     <h4 align="center"> CharitAble India | PO Box 226021 | Hazratganj, Lucknow | Uttar Pradesh | India </h4>
-  <h4 align="center"> Copyright &#169; 2021 Anshika Yadav - All Rights Reserved </h4>
+    <h4 align="center"> Copyright &#169; 2021 Anshika Yadav - All Rights Reserved </h4>
     <br>
 
   </body>
